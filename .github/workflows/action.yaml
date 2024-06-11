@@ -1,0 +1,19 @@
+name: action workflow
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    js-hello-world-program:
+        runs-on: ubuntu-latest
+        steps:
+            - name: simple js action
+              id: random-id
+              uses: actions/hello-world-javascript-action@v1.1
+              with:
+                who-to-greet: amrit
+        
+            - name: log greeting time
+              run: echo "${{steps.random-id.outputs.time}}"
+
