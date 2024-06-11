@@ -8,6 +8,14 @@ jobs:
     js-hello-world-program:
         runs-on: ubuntu-latest
         steps:
+            - name: checking the machine
+              run: |
+                pwd
+                ls
+                whoami
+                ip addr
+                
+
             - name: simple js action
               id: random-id
               uses: actions/hello-world-javascript-action@v1.1
