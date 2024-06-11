@@ -35,3 +35,9 @@ jobs:
               run: |
                 node -v 
                 npm -v
+#now we are going to use python shell
+            - name: python commands
+              run: |
+                import platform
+                print(platform.processor())
+              shell: python 
