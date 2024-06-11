@@ -14,3 +14,20 @@
 #     steps:
 #       - name: Print Hello, World!
 #         run: echo "Hello, World!"
+
+
+# name: sample for revision
+
+# on:
+#     push:
+#         branches:
+#             - main
+#             - feature1
+# jobs:
+#     running-shell-scripts:
+#         runs-on: ubuntu-latest
+
+#         steps:
+#             - name: stages
+#               run: echo "done"
+        
