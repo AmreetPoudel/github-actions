@@ -1,0 +1,37 @@
+# name: custom shell script workflow 
+
+# on:
+#     push:
+#         branches:
+#             - main
+#             - feature1
+#     pull_request:
+#         branches:
+#             - main
+# jobs:
+#     amrit-job:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: run shell commands
+#               run: echo "learning github actions"
+
+
+
+
+name: shell commands
+
+on:
+    push:
+        branches:
+            - main
+            - feature1
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo a string
+              run: echo "hello world!!!"
+            - name: multiline script
+              run: |
+                node -v 
+                npm -v
