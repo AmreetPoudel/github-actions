@@ -14,7 +14,8 @@ jobs:
                 ls
                 whoami
                 ip addr
-                
+            - name: git checkout
+              uses: actions/checkout@v4.1.6  
 
             - name: simple js action
               id: random-id
