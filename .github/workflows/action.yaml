@@ -1,3 +1,101 @@
+# name: Hello World Workflow
+# on:
+#   push:
+#     branches:
+#       - main  # Triggers the workflow on push events to the main branch
+#       - feature1
+#       - feature2
+#   pull_request:
+#     branches:
+#         -main
+# jobs:
+#   test-job-1:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print Hello, World!
+#         run: echo "Hello, World!"
+
+
+# name: sample for revision
+
+# on:
+#     push:
+#         branches:
+#             - main
+#             - feature1
+# jobs:
+#     running-shell-scripts:
+#         runs-on: ubuntu-latest
+
+#         steps:
+#             - name: stages
+#               run: echo "done"
+        
+
+
+
+
+# name: custom shell script workflow 
+
+# on:
+#     push:
+#         branches:
+#             - main
+#             - feature1
+#     pull_request:
+#         branches:
+#             - main
+# jobs:
+#     amrit-job:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: run shell commands
+#               run: echo "learning github actions"
+
+
+
+
+# name: shell commands
+
+# on:
+#     push:
+#         branches:
+#             - main
+#             - feature1
+# jobs:
+#     run-shell-commands:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: echo a string
+#               run: echo "hello world!!!"
+#             - name: multiline script
+#               run: |
+#                 node -v 
+#                 npm -v
+# #now we are going to use python shell
+#             - name: python commands
+#               run: |
+#                 import platform
+#                 print(platform.processor())
+#               shell: python  
+# #running windows commands
+#     run-windows-commands:
+#         runs-on: windows:latest
+# #now needs  is like depend on first of all run-shell-commands job will run then on complition of that job another job run-windows-commands will run
+# #this might be useful when we are installingpackages or order of execution might effect the output produced.
+#         needs:
+#             - run-shell-commands
+#         steps:
+#             - name: directory powershell
+#               run: Get-Location
+#             - name: directory bash
+#               run: pwd
+#               shell: bash
+
+
+
+
+
 name: action workflow
 
 on:
